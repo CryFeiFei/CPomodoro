@@ -25,10 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        cmainwindow.cpp
+        cmainwindow.cpp \
+    centerwidget.cpp
 
 HEADERS += \
-        cmainwindow.h
+        cmainwindow.h \
+    centerwidget.h
 
 FORMS += \
-        cmainwindow.ui
+        cmainwindow.ui \
+    centerwidget.ui
