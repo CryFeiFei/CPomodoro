@@ -16,7 +16,13 @@ centerwidget::centerwidget(QWidget *parent) :
 	m_timer = new QTimer(this);
 	m_timer->setInterval(1000);
 	connect(m_timer, &QTimer::timeout, this, &centerwidget::updateLabel);
-	m_nSecCount = 25 * 60;
+	m_nSecCount = 25 * 60; // 25 min
+
+	auto ftimerStart = [this]()->void
+	{
+
+	};
+	connect(ui->startButton, &QToolButton::click, &ftimerStart);
 }
 
 centerwidget::~centerwidget()
