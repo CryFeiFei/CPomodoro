@@ -49,6 +49,6 @@ void centerwidget::updateLabel()
 	if (!m_nSecCount)
 		m_timer->stop();
 
-	ui->numberLabel->setText(QString::number(m_nSecCount));
+	ui->lcdNumber->display(QString::number(m_nSecCount));
 	m_nSecCount --;
 }
