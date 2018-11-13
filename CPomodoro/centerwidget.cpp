@@ -28,6 +28,7 @@ centerwidget::centerwidget(QWidget *parent) :
 	{
 		m_nSecCount = 0;
 		m_timer->stop();
+		ui->lcdNumber->display(m_nSecCount);
 	};
 	connect(ui->stopButton, &QToolButton::clicked, ftimerBreak);
 }
@@ -42,6 +43,6 @@ void centerwidget::updateLabel()
 	if (!m_nSecCount)
 		m_timer->stop();
 
-	ui->lcdNumber->display(QString::number(m_nSecCount));
+	ui->lcdNumber->display(m_nSecCount);
 	m_nSecCount --;
 }
