@@ -3,9 +3,11 @@
 
 #include <QMainWindow>
 
-namespace Ui {
-class CMainWindow;
-}
+class centerwidget;
+
+//namespace Ui {
+//class CMainWindow;
+//}
 
 class CMainWindow : public QMainWindow
 {
@@ -16,7 +18,8 @@ public:
 	~CMainWindow();
 
 private:
-	Ui::CMainWindow *ui;
+//	Ui::CMainWindow *ui;
+	centerwidget* m_centerwidget;
 };
 
 #endif // CMAINWINDOW_H

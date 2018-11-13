@@ -17,16 +17,16 @@ centerwidget::centerwidget(QWidget *parent) :
 //	m_timer->setInterval(1000);
 	connect(m_timer, &QTimer::timeout, this, &centerwidget::updateLabel);
 
-	auto ftimerStart = [=]()
-	{
-//		m_nSecCount = 25 * 60; // 25 min
-//		m_timer->start(1000);
-	};
-	connect(ui->startButton, &QToolButton::click, [this]()
+	auto ftimerStart = [this]()
 	{
 		m_nSecCount = 25 * 60; // 25 min
 		m_timer->start(1000);
-	});
+	};
+//	connect(ui->startButton, &QToolButton::click, [this]()
+//	{
+//		m_nSecCount = 25 * 60; // 25 min
+//		m_timer->start(1000);
+//	});
 
 	connect(ui->startButton, &QToolButton::clicked, ftimerStart);
 
@@ -49,6 +49,6 @@ void centerwidget::updateLabel()
 	if (!m_nSecCount)
 		m_timer->stop();
 
-	ui->lcdNumber->display(QString::number(m_nSecCount));
+	ui->numberLabel->setText(QString::number(m_nSecCount));
 	m_nSecCount --;
 }
