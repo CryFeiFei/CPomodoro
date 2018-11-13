@@ -14,29 +14,15 @@ centerwidget::centerwidget(QWidget *parent) :
 {
 	ui->setupUi(this);
 	m_timer = new QTimer(this);
-//	m_timer->setInterval(1000);
 	connect(m_timer, &QTimer::timeout, this, &centerwidget::updateLabel);
 
-	auto ftimerStart = [this]()
+	auto ftimerStart = [this]()->void
 	{
 		m_nSecCount = 25 * 60; // 25 min
 		m_timer->start(1000);
 	};
-//	connect(ui->startButton, &QToolButton::click, [this]()
-//	{
-//		m_nSecCount = 25 * 60; // 25 min
-//		m_timer->start(1000);
-//	});
 
 	connect(ui->startButton, &QToolButton::clicked, ftimerStart);
-
-
-//	auto ftimerReset = [this]()->void
-//	{
-//		m_timer->stop();
-//		m_nSecCount = 0;
-//	};
-//	connect(ui->resetButton, &QToolButton::click, &ftimerReset);
 }
 
 centerwidget::~centerwidget()
