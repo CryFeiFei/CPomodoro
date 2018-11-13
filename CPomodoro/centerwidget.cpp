@@ -28,6 +28,9 @@ centerwidget::centerwidget(QWidget *parent) :
 		m_timer->start(1000);
 	});
 
+	connect(ui->startButton, &QToolButton::clicked, ftimerStart);
+
+
 //	auto ftimerReset = [this]()->void
 //	{
 //		m_timer->stop();
