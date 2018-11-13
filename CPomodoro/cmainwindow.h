@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 class centerwidget;
+class QSystemTrayIcon;
 
 //namespace Ui {
 //class CMainWindow;
@@ -18,8 +19,8 @@ public:
 	~CMainWindow();
 
 private:
-//	Ui::CMainWindow *ui;
 	centerwidget* m_centerwidget;
+	QSystemTrayIcon*	m_systemTrayIcon;
 };
 
 #endif // CMAINWINDOW_H

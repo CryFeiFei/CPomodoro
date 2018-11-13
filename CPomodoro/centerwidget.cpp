@@ -23,6 +23,13 @@ centerwidget::centerwidget(QWidget *parent) :
 	};
 
 	connect(ui->startButton, &QToolButton::clicked, ftimerStart);
+
+	auto ftimerBreak = [this]()->void
+	{
+		m_nSecCount = 0;
+		m_timer->stop();
+	};
+	connect(ui->stopButton, &QToolButton::clicked, ftimerBreak);
 }
 
 centerwidget::~centerwidget()
