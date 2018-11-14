@@ -60,15 +60,27 @@
        </property>
        <item>
         <widget class="QToolButton" name="startButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="text">
-          <string>start</string>
+          <string>Start</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QToolButton" name="stopButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="text">
-          <string>reset</string>
+          <string>Reset</string>
          </property>
         </widget>
        </item>
