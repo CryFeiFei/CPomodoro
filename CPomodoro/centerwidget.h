@@ -14,7 +14,7 @@ class centerwidget : public QWidget
 	Q_OBJECT
 
 public:
-	explicit centerwidget(QWidget *parent = 0);
+	explicit centerwidget(QWidget *parent = nullptr);
 	~centerwidget();
 
 protected slots:

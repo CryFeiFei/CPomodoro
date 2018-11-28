@@ -36,6 +36,7 @@ HEADERS += \
 
 FORMS += \
         cmainwindow.ui \
-    centerwidget.ui
+    centerwidget.ui \
+    cmainwidget.ui
 
 CONFIG += c++11
