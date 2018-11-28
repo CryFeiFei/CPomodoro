@@ -4,7 +4,9 @@
 #ifndef CMAINWIDGET_H
 #define CMAINWIDGET_H
 
-#include <QWidget>
+#include<QWidget>
+
+class QSplitter;
 
 namespace Ui {
 class cmainwidget;
@@ -18,7 +20,9 @@ public:
 	~CMainWidget();
 
 private:
-	Ui::cmainwidget* ui;
+	Ui::cmainwidget* m_ui;
+	QWidget* m_titleMenuBar;
+	QSplitter* m_mainWidget;
 
 signals:
 
